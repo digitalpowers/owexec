@@ -4,6 +4,8 @@ owexec
 Tool from officewarfare.net to execute files on a remote comptuer (with admin priviledges) in the context of the running user
 
 USAGE
+=====
+```
 owexec v-1.1 USAGE
 owexec -c computername -k command [ -p parameters ] [ -u domain\user ] [ -copy ]
  [ -nowait ]
@@ -25,9 +27,11 @@ owexec -c computername -k command [ -p parameters ] [ -u domain\user ] [ -copy ]
         -nowait does not ask to press a key when the program finishes
 
 download the current version at officewarfare.net
+```
 
 Example
 =======
+```
 ————– create FindNetUse.bat file ————-
 @echo off
 REM get net use
@@ -38,3 +42,4 @@ del c:\%USERNAME%-%COMPUTERNAME%-NetUse.txt
 
 run the owexec command with -copy parameter:
 owexec -nowait -k “NetUseRemoteBatch.bat” -copy -c “PC123″
+```
