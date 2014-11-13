@@ -121,7 +121,7 @@ Public Class ExecuteProcess
                 Dim objManagementScope As ManagementScope = New ManagementScope("\\" + "." + "\root\cimv2")
                 objManagementScope.Connect()
                 Dim processClassFinal As ManagementClass = New ManagementClass(objManagementScope, New ManagementPath("Win32_Process"), Nothing)
-                Dim inParamsFinal As ManagementBaseObject = proWcessClassFinal.GetMethodParameters("Create")
+                Dim inParamsFinal As ManagementBaseObject = processClassFinal.GetMethodParameters("Create")
                 Dim commandline As String = appName + " " + arguments
                 report(commandline)
                 inParamsFinal("CommandLine") = commandline
